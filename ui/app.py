@@ -12,7 +12,7 @@ st.set_page_config(
 )
 
 st.title("🏠 California House Price Predictor")
-st.markdown("XGBoost model দিয়ে house price predict করো")
+st.markdown("Predict California house prices using XGBoost model")
 st.divider()
 
 col1, col2, col3 = st.columns(3)
@@ -112,7 +112,7 @@ if st.button("🔮 Predict House Price", type="primary", use_container_width=Tru
             st.error(f"API Error: {response.status_code}")
 
     except requests.exceptions.ConnectionError:
-        st.error("API connect করা যাচ্ছে না। FastAPI চালু আছে কিনা check করো।")
+        st.error("Cannot connect to API. Please make sure FastAPI is running.")
     except Exception as e:
         st.error(f"Error: {str(e)}")
 
